@@ -2,26 +2,27 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="row">
     <div class="navbar-left navbar-links">
-      <a class="button" href="#">HOME</a>
+      <a class="button" href="index.php">HOME</a>
       <a class="button" href="#">FORUM</a>
       <a class="button" href="#">ABOUT</a>
-      <hr>
     </div>
 
     <div class="navbar-right">
       <!-- This is an example to get logged in user info -->
-      <?php 
-        echo '<p>Hi, ' . $_SESSION['u_fname'] . ' ' . $_SESSION['u_lname'] . '!</p>';
-      ?>
-
       <form action="includes/logout_inc.php" method="POST">
         <button type="submit" name="submit">Logout</button>
       </form>
+    </div>
+    <div style="position: absolute; top: 0; right: 150px; text-align:right; padding-top: 35px;">
+        <?php 
+            echo '<p>Hi, ' . $_SESSION['u_fname'] . ' ' . $_SESSION['u_lname'] . '!</p>';
+        ?>  
     </div>
   </div>
 
 <!-- Body
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container" style="margin-top: 10%">
   <div class="row">
     <div class="twelve columns">
       <h4>Welcome to the symptom checker</h4>
@@ -119,8 +120,8 @@
       </div>  
 
       <div class="six columns">
-        <label>Notify a NAU administration member about your situation?</label>
-        <select class="u-med-width" id="">
+        <label>Notify NAU about your situation?</label>
+        <select class="u-full-width" id="">
           <option value="Option 1">Yes, monitor my situation.</option>
           <option value="Option 2">No, this is not urgent.</option>
         </select>
@@ -129,3 +130,4 @@
 
     <input class="twelve columns button-primary" type="submit" value="Submit">
   </form>
+</div>    
