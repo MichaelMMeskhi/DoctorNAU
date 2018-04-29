@@ -7,10 +7,10 @@
 		private static $charset;
 
 		private static function connect() {
-			self::$servername = "localhost";
-			self::$username = "root";
-			self::$password = "root";
-			self::$dbname = "drnaudb";
+			self::$servername = "SERVER";
+			self::$username = "doctornau";
+			self::$password = "PASSWORD";
+			self::$dbname = "doctornau";
 			self::$charset = "utf8mb4";
 
 			try {
