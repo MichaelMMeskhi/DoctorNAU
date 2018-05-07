@@ -31,11 +31,10 @@
           <hr>
           <p>To get an accurate result please fill out the form below as accurately as possible:</p>
           <ul>
-            <li>Enter your first and last name just as on your student ID.</li>
-            <li>Enter your student ID and major.</li>
-            <li>Enter the reason you are checking yourself.</li>  
+            <li>Enter your personal information.</li>
             <li>Select the symptoms you are experiencing and submit.</li>
           </ul>  
+          <p>If you have selected the option for monitoring, you will be contacted by a NAU administration employee regarding your health issue.</p>
         </div>
       </div>
 
@@ -76,7 +75,7 @@
             <label for="">Student ID</label>
             <input class="u-full-width" type="number" placeholder="111222333" id="" max="999999999">  
           </div>
-          <div class="two columns">
+          <div class="three columns">
             <label for="">Residency</label>
             <select class="u-full-width" id="">
               <option value="Option 1">On-Campus</option>
@@ -84,12 +83,8 @@
             </select>
           </div>
           <div class="three columns">
-            <label for="">Major</label>
-            <select class="u-full-width" id="">
-              <option value="Option 1">Computer Science</option>
-              <option value="Option 2">Business</option>
-              <option value="Option 3">Education</option>
-            </select>
+            <label for="">Phone</label>
+            <input class="u-full-width" type="number" placeholder="832-123-4567" id="" max="9999999999"> 
           </div>  
         </div>
 
@@ -107,6 +102,8 @@
                 <option>Stuffed Nose</option>
                 <option>Blurry Vision</option>
                 <option>Fatigue</option>
+                <option>Problem Sleeping</option>
+                <option>Skin Iritation</option>
               </select>
 
             <!--- Script for dropdown menu
@@ -115,7 +112,7 @@
                 $(".chosen-select").chosen({
                   no_results_text: "Oops, nothing found!",
                   width:"100%",
-                  max_selected_options: 4
+                  max_selected_options: 3
                 })
               </script>
             </form>

@@ -4,7 +4,6 @@
     <div class="navbar-left navbar-links">
       <a class="button" href="index.php">HOME</a>
       <a class="button" href="index.php?page=symptoms">SYMPTOMS</a>
-      <a class="button" href="#">FORUM</a>
       <a class="button" href="#">ABOUT</a>
     </div>
 
