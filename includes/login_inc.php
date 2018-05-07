@@ -23,8 +23,8 @@
         $_SESSION['u_id'] = $query[0]['id'];
         $_SESSION['u_username'] = $query[0]['username'];
         $_SESSION['u_email'] = $query[0]['email'];
-        $_SESSION['u_fname'] = $query[0]['first_name'];
-        $_SESSION['u_lname'] = $query[0]['last_name'];
+        $_SESSION['u_fname'] = $query[0]['full_name'];
+        $_SESSION['u_phone'] = $query[0]['phone'];
 
         header("Location: ../index.php?page=symptoms&login=success");
         exit();

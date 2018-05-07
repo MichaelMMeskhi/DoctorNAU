@@ -5,6 +5,9 @@
     if ($_GET['page'] == 'symptoms' && isset($_SESSION['u_id'])) { // to make sure only logged in users can access this page
       include('includes/views/symptoms.php');
     }
+    elseif ($_GET['page'] == 'result' && isset($_SESSION['u_id'])) {
+      include('includes/views/result.php');
+    }
     elseif ($_GET['page'] == 'home') {
       include('includes/views/home.php');
     }

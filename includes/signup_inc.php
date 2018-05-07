@@ -5,9 +5,9 @@
   if (isset($_POST['submit'])) {
     $id = $_POST['stdid'];
     $username = $_POST['uname'];
-    $first_name = $_POST['fname'];
-    $last_name = $_POST['lname'];
+    $full_name = $_POST['fname'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $password = $_POST['psw'];
     $password_rep = $_POST['psw-repeat'];
 
@@ -49,14 +49,14 @@
               else {
                 $hashedPsw = password_hash($password, PASSWORD_DEFAULT);
 
-                DB::query('INSERT INTO users (id, username, email, first_name, last_name, password) VALUES (:id, :username, :email, :first_name, :last_name, :password)',
-                  array(':id'=>$id,':username'=>$username,':email'=>$email,':first_name'=>$first_name,':last_name'=>$last_name,':password'=>$hashedPsw));
+                DB::query('INSERT INTO users (id, username, email, full_name, password, phone) VALUES (:id, :username, :email, :full_name, :password, :phone)',
+                  array(':id'=>$id,':username'=>$username,':email'=>$email,':full_name'=>$full_name,':password'=>$hashedPsw,':phone'=>$phone));
 
                 $_SESSION['u_id'] = $id;
                 $_SESSION['u_username'] = $username;
                 $_SESSION['u_email'] = $email;
-                $_SESSION['u_fname'] = $first_name;
-                $_SESSION['u_lname'] = $last_name;
+                $_SESSION['u_fname'] = $full_name;
+                $_SESSION['u_phone'] = $phone;
 
                 header("Location: ../index.php?page=symptoms&signup=success");
                 exit();

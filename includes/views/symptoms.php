@@ -11,14 +11,14 @@
 
     <?php 
       if (!isset($_SESSION['u_id'])){
-        include include ('includes/menubarOut_inc.php');
+        include ('includes/menubarOut_inc.php');
 
         // prevent exploit by typing the address manually
         header("Location: ../../index.php");
         exit();
       }
       else {
-        include include ('includes/menubarIn_inc.php');
+        include ('includes/menubarIn_inc.php');
       }
     ?>
 
@@ -38,15 +38,11 @@
         </div>
       </div>
 
-      <form>
+      <form action="includes/symptom_inc.php" method="post">
         <div class="row">
-          <div class="three columns">
-            <label for="name">First name</label>
-            <input class="u-full-width" type="text" placeholder="Mike" id="name"  maxlength="35"/>
-          </div>
-          <div class="three columns">
-            <label for="name">Last name</label>
-            <input class="u-full-width" type="text" placeholder="Rasuna" id="name"  maxlength="35"/>
+          <div class="six columns">
+            <label for="">Full Name</label>
+            <?php echo '<input class="u-full-width" type="text" value="' . $_SESSION['u_fname'] . '" id="name" maxlength="128">' ?>
           </div>
           <div class="six columns">
             <label for="">Reason for checking your symptoms</label>
@@ -73,7 +69,7 @@
           </div>  
           <div class="two columns">
             <label for="">Student ID</label>
-            <input class="u-full-width" type="number" placeholder="111222333" id="" max="999999999">  
+            <?php echo '<input class="u-full-width" type="number" value="' . $_SESSION['u_id'] . '" id="" max="999999999">' ?>  
           </div>
           <div class="three columns">
             <label for="">Residency</label>
@@ -84,38 +80,36 @@
           </div>
           <div class="three columns">
             <label for="">Phone</label>
-            <input class="u-full-width" type="number" placeholder="832-123-4567" id="" max="9999999999"> 
+            <?php echo '<input class="u-full-width" type="number" value="' . $_SESSION['u_phone'] . '" id="" max="9999999999">' ?>
           </div>  
         </div>
 
         <div class="row">
           <div class="six columns">
-            <form action="" method="post">
-              <label>Symptoms</label>
-              <select data-placeholder="Select up to four symptoms" multiple class="chosen-select" name="symptoms-menu">
-                <option value=""></option>
-                <option>Fever</option>
-                <option>Headache</option>
-                <option>Rash</option>
-                <option>Chest Pain</option>
-                <option>Non-stopping Cough</option>
-                <option>Stuffed Nose</option>
-                <option>Blurry Vision</option>
-                <option>Fatigue</option>
-                <option>Problem Sleeping</option>
-                <option>Skin Iritation</option>
-              </select>
+            <label>Symptoms</label>
+            <select data-placeholder="Select up to three symptoms" multiple class="chosen-select" name="symptoms-menu[]">
+              <option value=""></option>
+              <option value="Fever">Fever</option>
+              <option value="Headache">Headache</option>
+              <option value="Rash">Rash</option>
+              <option value="Chest Pain">Chest Pain</option>
+              <option value="Non-stopping Cough">Non-stopping Cough</option>
+              <option value="Stuffed Nose">Stuffed Nose</option>
+              <option value="Blurry Vision">Blurry Vision</option>
+              <option value="Fatigue">Fatigue</option>
+              <option value="Problem Sleeping">Problem Sleeping</option>
+              <option value="Skin Iritation">Skin Iritation</option>
+            </select>
 
-            <!--- Script for dropdown menu
-              –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-              <script>
-                $(".chosen-select").chosen({
-                  no_results_text: "Oops, nothing found!",
-                  width:"100%",
-                  max_selected_options: 3
-                })
-              </script>
-            </form>
+          <!--- Script for dropdown menu
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <script>
+              $(".chosen-select").chosen({
+                no_results_text: "Oops, nothing found!",
+                width:"100%",
+                max_selected_options: 3
+              })
+            </script>
           </div>  
 
           <div class="six columns">
@@ -126,8 +120,7 @@
             </select>
           </div>
         </div>
-
-        <input class="twelve columns button-primary" type="submit" value="Submit">
+        <button class="twelve columns button-primary" type="submit" name="submit">Submit</button>
       </form>
     </div>
 

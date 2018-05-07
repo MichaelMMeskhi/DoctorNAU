@@ -11,14 +11,14 @@
 
     <?php 
       if (!isset($_SESSION['u_id'])){
-        include include ('includes/menubarOut_inc.php');
+        include ('includes/menubarOut_inc.php');
 
         // prevent exploit by typing the address manually
         header("Location: ../../index.php");
         exit();
       }
       else {
-        include include ('includes/menubarIn_inc.php');
+        include ('includes/menubarIn_inc.php');
       }
     ?>
 
@@ -26,7 +26,14 @@
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container" style="margin-top: 10%">
         <div class="row">
-            <h1>HII</h1>
+            <?php 
+              if (isset($_SESSION['u_disease'])) {
+                echo '<h1>'.$_SESSION['u_disease'].'</h1>';
+              }
+              else {
+                echo '<h1>Disease cannot be identified. Call doctor immediately!</h1>';
+              }
+            ?>
         </div>
     </div>
 

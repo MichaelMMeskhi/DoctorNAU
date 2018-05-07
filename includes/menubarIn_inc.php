@@ -15,7 +15,7 @@
     </div>
     <div style="position: absolute; top: 0; right: 150px; text-align:right; padding-top: 35px;">
         <?php 
-            echo '<p>Hi, ' . $_SESSION['u_fname'] . ' ' . $_SESSION['u_lname'] . '!</p>';
-        ?>  
+            echo '<p>Hi, ' . $_SESSION['u_fname'] . '!</p>';
+        ?>
     </div>
   </div>

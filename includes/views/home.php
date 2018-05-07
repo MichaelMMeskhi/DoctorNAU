@@ -11,10 +11,10 @@
 
     <?php 
       if (!isset($_SESSION['u_id'])){
-        include include ('includes/menubarOut_inc.php');
+        include ('includes/menubarOut_inc.php');
       }
       else {
-        include include ('includes/menubarIn_inc.php');
+        include ('includes/menubarIn_inc.php');
       }
     ?>
 
