@@ -1,10 +1,8 @@
 <!-- Login + Register
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="row">
-    <div class="navbar-left navbar-links">
-      <a class="button" href="index.php">HOME</a>
-      <a class="button" href="#">ABOUT</a>
-      <hr>
+    <div class="six columns navbar-left navbar-links">
+      <a class="six columns button" href="index.php">HOME</a>
     </div>
 
     <div class="navbar-right">
@@ -103,6 +101,5 @@
             </div>
           </form>
         </div>
-      <hr>
     </div>
   </div>

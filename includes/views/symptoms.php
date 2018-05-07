@@ -41,54 +41,56 @@
       <form action="includes/symptom_inc.php" method="post">
         <div class="row">
           <div class="six columns">
-            <label for="">Full Name</label>
-            <?php echo '<input class="u-full-width" type="text" value="' . $_SESSION['u_fname'] . '" id="name" maxlength="128">' ?>
+            <label for="fname">Full Name</label>
+            <?php echo '<input class="u-full-width" type="text" value="' . $_SESSION['u_fname'] . '" name="fname" maxlength="128" required>' ?>
           </div>
           <div class="six columns">
-            <label for="">Reason for checking your symptoms</label>
-            <input class="u-full-width" type="text" placeholder="Because..." id="">  
+            <label for="reason">Reason for checking your symptoms</label>
+            <input class="u-full-width" type="text" placeholder="Because..." name="reason" required>  
           </div>
         </div>
 
         <div class="row">
           <div class="two columns">
-            <label for="">Age</label>
-            <select class="u-full-width" id="">
+            <label for="age">Age</label>
+            <select class="u-full-width" name="age" required>
+              <option value="">Age</option>
               <option value="Option 1">16-18</option>
               <option value="Option 2">18-21</option>
               <option value="Option 3">> 21</option>
             </select> 
           </div>
           <div class="two columns">
-            <label for="">Gender</label>
-            <select class="u-full-width" id="">
+            <label for="gender">Gender</label>
+            <select class="u-full-width" name="gender" required>
+              <option value="">Gender</option>
               <option value="Option 1">Male</option>
               <option value="Option 2">Female</option>
               <option value="Option 3">Other</option>
             </select>
           </div>  
           <div class="two columns">
-            <label for="">Student ID</label>
-            <?php echo '<input class="u-full-width" type="number" value="' . $_SESSION['u_id'] . '" id="" max="999999999">' ?>  
+            <label for="stdid">Student ID</label>
+            <?php echo '<input class="u-full-width" type="number" value="' . $_SESSION['u_id'] . '" name="stdid" max="999999999" required>' ?>  
           </div>
           <div class="three columns">
             <label for="">Residency</label>
-            <select class="u-full-width" id="">
+            <select class="u-full-width" name="residency" required>
+              <option value="">Residency</option>
               <option value="Option 1">On-Campus</option>
               <option value="Option 2">Off-Campus</option>
             </select>
           </div>
           <div class="three columns">
             <label for="">Phone</label>
-            <?php echo '<input class="u-full-width" type="number" value="' . $_SESSION['u_phone'] . '" id="" max="9999999999">' ?>
+            <?php echo '<input class="u-full-width" type="number" value="' . $_SESSION['u_phone'] . '" name="phone" max="9999999999" required>' ?>
           </div>  
         </div>
 
         <div class="row">
           <div class="six columns">
             <label>Symptoms</label>
-            <select data-placeholder="Select up to three symptoms" multiple class="chosen-select" name="symptoms-menu[]">
-              <option value=""></option>
+            <select data-placeholder="Select up to three symptoms" multiple class="chosen-select" name="symptoms-menu[]" required>
               <option value="Fever">Fever</option>
               <option value="Headache">Headache</option>
               <option value="Rash">Rash</option>
@@ -114,7 +116,8 @@
 
           <div class="six columns">
             <label>Notify NAU about your situation?</label>
-            <select class="u-full-width" id="">
+            <select class="u-full-width" name="monitor" required>
+              <option value="">Notify NAU?</option>
               <option value="Option 1">Yes, monitor my situation.</option>
               <option value="Option 2">No, this is not urgent.</option>
             </select>

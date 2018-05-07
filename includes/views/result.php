@@ -26,18 +26,36 @@
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container" style="margin-top: 10%">
         <div class="row">
-            <?php 
-              if (isset($_SESSION['u_disease'])) {
-                echo '<h1>'.$_SESSION['u_disease'].'</h1>';
-              }
-              else {
-                echo '<h1>Disease cannot be identified. Call doctor immediately!</h1>';
-              }
-            ?>
+            <div class="twelve columns">
+                <div class="symptom">
+                    <img src="images/symptom.jpg" width="40%" height="40%">
+                </div>
+            </div> 
+        <div class="row">
+            <div class="twelve columns">
+                </div>
+                    <?php 
+                      if (isset($_SESSION['u_disease'])) {
+                        echo '<h3 align="center"><strong>'.$_SESSION['u_disease'].'</strong></h3>';
+                        echo '<hr>';
+                        echo '<p>'.$_SESSION['u_description'].'</p>';
+                        echo '<ul class="source">
+                                <li><a href="'.$_SESSION['u_source'].'">Information about your disease.</a></li>
+                              </ul>';
+                      }
+                      else {
+                        echo '<h4 align="center">Disease cannot be identified. Call doctor immediately!</h4>';
+                        echo '<hr>';
+                      }
+                    ?>
+                    <p>You can recheck you symptoms or download your personal medical report that you can take with you to the doctor.</p>
+                    <div class="clearfix">
+                        <a class="twelve columns button" href="index.php?page=symptoms">Restart</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-  </div>
   
   <footer class="footer">
     <p>&copy; Michael M.Meskhi + Inamullah Rasuna, 2018</p>

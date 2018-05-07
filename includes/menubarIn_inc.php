@@ -1,10 +1,9 @@
 <!-- Login + Register
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="row">
-    <div class="navbar-left navbar-links">
-      <a class="button" href="index.php">HOME</a>
-      <a class="button" href="index.php?page=symptoms">SYMPTOMS</a>
-      <a class="button" href="#">ABOUT</a>
+    <div class="eight columns navbar-left navbar-links">
+      <a class="four columns button" href="index.php">HOME</a>
+      <a class="four columns button" href="index.php?page=symptoms">SYMPTOMS</a>
     </div>
 
     <div class="navbar-right">
