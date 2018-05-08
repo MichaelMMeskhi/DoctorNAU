@@ -3,6 +3,7 @@
   include ('classes/Database.php');
 
   if (isset($_POST['submit'])) {
+    $_SESSION['report'] = $_POST;
     $symptoms = $_POST['symptoms-menu']; sort($symptoms);
 
     $query = DB::query('SELECT * FROM symptoms WHERE symptom1=:symptom1 AND symptom2=:symptom2 AND symptom3=:symptom3', 

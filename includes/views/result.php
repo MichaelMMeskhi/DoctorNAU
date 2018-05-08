@@ -48,10 +48,15 @@
                         echo '<hr>';
                       }
                     ?>
-                    <p>You can recheck you symptoms or download your personal medical report that you can take with you to the doctor.</p>
-                    <div class="clearfix">
-                        <a class="twelve columns button" href="index.php?page=symptoms">Restart</a>
-                    </div>
+                    
+                    <form action="includes/result_inc.php" method="post">
+                      <p>You can recheck you symptoms or download your personal medical report that you can take with you to the doctor.</p>
+                      <div class="clearfix">
+                          <!--<a class="six columns button" href="index.php?page=symptoms">Restart</a>-->
+                          <button class="six columns button" type="submit" name="restart">Restart</button>
+                          <button class="six columns button" type="submit" name="download">Report</button>
+                      </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -1,0 +1,12 @@
+Full Name:Inamullah Rasuna
+Reason:I am old.
+Age:Option 1
+Gender:Option 1
+Student ID:1
+Residency:Option 1
+Phone:8325188961
+Monitor:Option 1
+Disease:Undetermined
+Symptom 1:Headache
+Symptom 2:Chest Pain
+Symptom 3:Non-stopping Cough
